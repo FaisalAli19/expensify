@@ -104,5 +104,10 @@ typings/
 # Serverless directories
 .serverless
 
+# build files
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
 
 # End of https://www.gitignore.io/api/node,macos
