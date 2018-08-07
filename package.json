@@ -24,7 +24,7 @@
     "enzyme-to-json": "^3.3.4",
     "live-server": "^1.2.0",
     "moment": "^2.20.1",
-    "node-sass": "4.5.3",
+    "node-sass": "^4.9.2",
     "normalize.css": "7.0.0",
     "raf": "3.3.2",
     "react": "^16.4.2",
