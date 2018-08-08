@@ -26,6 +26,7 @@
     "moment": "^2.20.1",
     "node-sass": "^4.9.2",
     "normalize.css": "7.0.0",
+    "numeral": "^2.0.6",
     "raf": "3.3.2",
     "react": "^16.4.2",
     "react-addons-shallow-compare": "^15.6.2",
@@ -43,11 +44,11 @@
     "webpack": "3.1.0"
   },
   "devDependencies": {
-		"enzyme": "^3.3.0",
-		"enzyme-adapter-react-16": "^1.1.1",
-		"enzyme-to-json": "^3.3.4",
-		"jest": "^23.4.2",
-		"react-test-renderer": "^16.4.2",
-		"webpack-dev-server": "2.5.1"
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.4.2",
+    "react-test-renderer": "^16.4.2",
+    "webpack-dev-server": "2.5.1"
   }
 }
