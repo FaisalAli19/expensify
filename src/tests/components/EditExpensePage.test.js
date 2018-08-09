@@ -14,7 +14,7 @@ beforeEach(() => {
 		<EditExpensePage 
 			expense={expenses[0]} 
 			editExpense={ onSubmitSpy } 
-			removeExpense={ onRemoveSpy }
+			startRemoveExpense={ onRemoveSpy }
 			history={ historySpy } 
 		/>
 	)
