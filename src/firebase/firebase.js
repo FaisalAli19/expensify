@@ -1,4 +1,4 @@
-import { database, initializeApp } from 'firebase';
+import { database, initializeApp, auth } from 'firebase';
 
 const config = {
 	apiKey: process.env.FIREBASE_API_KEY,
@@ -11,4 +11,6 @@ const config = {
 
 initializeApp(config);
 
-export default database
+const googleAuthProvider = new auth.GoogleAuthProvider();
+
+export  { auth, googleAuthProvider,	database as default}

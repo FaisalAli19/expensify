@@ -7,7 +7,7 @@ import configStore from './store/configStore'
 import 'normalize.css/normalize.css';
 import 'react-dates/lib/css/_datepicker.css';
 import './styles/styles.scss';
-import './firebase/firebase';
+import { auth } from './firebase/firebase';
 
 const store = configStore();
 
@@ -21,5 +21,13 @@ ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
 store.dispatch(startSetExpenses()).then(() => {
 	ReactDOM.render(jsx, document.getElementById('app'));
+})
+
+auth().onAuthStateChanged((user) => {
+	if (user) {
+		console.log('Logged In');
+	}else{
+		console.log('Logged Out');
+	}
 })
 
