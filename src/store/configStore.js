@@ -4,16 +4,22 @@ import thunk from 'redux-thunk';
 
 import expensesReducers from '../reducers/expenses'
 import filtersReducers from '../reducers/filters'
+import authReducers from '../reducers/auth';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+let middleware;
+
+if (process.env.NODE_ENV === 'production') middleware = [thunk]
+else middleware = [logger, thunk]
 
 export default () => {
 	const store = createStore(
 		combineReducers({
 			expenses: expensesReducers,
-			filters: filtersReducers
+			filters: filtersReducers,
+			auth: authReducers
 		}),
-		composeEnhancers(applyMiddleware(logger, thunk))
+		composeEnhancers(applyMiddleware(...middleware))
 	)
 
 	return store;
