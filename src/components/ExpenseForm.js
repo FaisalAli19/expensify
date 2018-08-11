@@ -58,15 +58,16 @@ class ExpenseForm extends Component {
 	render() {
 		const { description, amount, note, createdAt, focused } = this.state;
 		return (
-			<div>
-				{ this.state.error && <p>{this.state.error}</p>}
-				<form onSubmit={this.onSubmit}>
+			<form className="form" onSubmit={this.onSubmit}>
+				{ this.state.error && <p className="form__error">{this.state.error}</p>}
 					<input type="text" 
+						className="text-input"
 						placeholder="Description" autoFocus 
 						value={ description } 
 						onChange={this.onDescriptionChange}
 					/>
 					<input type="text" 
+					className="text-input"
 					placeholder="Amount" 
 					value={ amount }
 					onChange={this.onAmountChange}
@@ -80,13 +81,15 @@ class ExpenseForm extends Component {
 						isOutsideRange={() => false} //Enable prior date to current date
 					/>
 					<textarea 
+						className="textarea-input"
 						placeholder="Add a note for your expense (optional)"
 						value={ note }
 						onChange={this.onNoteChange}
 						></textarea>
-					<button>Add Expense</button>
-				</form>
-			</div>
+					<div>
+						<button className="buttons">Add Expense</button>
+					</div>
+			</form>
 		)
 	}
 }

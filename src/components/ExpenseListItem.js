@@ -27,15 +27,13 @@ numeral.locale('inr');
 const ExpenseListItem = (props) => {
 	const { description, amount, createdAt, id } = props;
 	return (
-		<div>
-			<Link to={`/edit/${id}`}>
-				<h3>{description}</h3>
-			</Link>
-			<p>
-			{ numeral(amount / 100).format('$0,0a') } 
-			-- 
-			{ moment(createdAt).format("MMMM Do YYYY") }</p>
-		</div>
+		<Link className="list-items" to={`/edit/${id}`}>
+			<div>
+				<h3 className="list-items__title">{description}</h3>
+				<span className="list-items__sub-title"> { moment(createdAt).format("MMMM Do YYYY") } </span>
+			</div>
+			<h3 className="list-items__amount"> { numeral(amount / 100).format('$0,0a') } </h3>
+		</Link>
 	)
 }
 
